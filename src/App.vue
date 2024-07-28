@@ -23,7 +23,7 @@
   const cartItems = ref([]);
 
   onMounted(async() => {
-    const response = await fetch("http://localhost:8080/data.json");
+    const response = await fetch("/data.json");
     foods.value = await response.json();
     console.log(foods);
   });
